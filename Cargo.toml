@@ -1,0 +1,10 @@
+[package]
+name = "err-per-field"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = [".", "err-per-field-derive"]
+
+[dependencies]
+err-per-field-derive = { path = "err-per-field-derive" }
