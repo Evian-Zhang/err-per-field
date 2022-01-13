@@ -50,10 +50,10 @@ pub use err_per_field_derive::ErrPerField;
 
 /// Trait used for inner usage. DO NOT USE DIRECTLY!
 #[doc(hidden)]
-pub trait FieldMayErr {
+pub trait ErrPerField {
     /// Wrapper of this struct
     type Wrapper;
 }
 
 /// A wrapper of the raw struct.
-pub type Wrapper<T> = <T as FieldMayErr>::Wrapper;
+pub type Wrapper<T> = <T as ErrPerField>::Wrapper;

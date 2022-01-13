@@ -179,7 +179,7 @@ pub fn err_per_field(input: TokenStream) -> TokenStream {
             #(#wrapper_body),*
         }
 
-        impl #impl_generics err_per_field::FieldMayErr for #container_ident #ty_generics #where_clause {
+        impl #impl_generics err_per_field::ErrPerField for #container_ident #ty_generics #where_clause {
             type Wrapper = #wrapper_struct_ident #ty_generics;
         }
 
