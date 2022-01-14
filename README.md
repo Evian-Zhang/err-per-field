@@ -70,6 +70,7 @@ To handle this problem, this crate provides a rather simple and graceful method.
 ```rust
 use err_per_field::{ErrPerField, Wrapper};
 
+#[derive(Debug)]
 struct AnError;
 
 #[derive(ErrPerField)]
