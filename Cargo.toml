@@ -13,4 +13,4 @@ readme = "README.md"
 members = [".", "err-per-field-derive"]
 
 [dependencies]
-err-per-field-derive = { path = "err-per-field-derive" }
+err-per-field-derive = { path = "err-per-field-derive", version = "0.1" }
