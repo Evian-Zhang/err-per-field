@@ -8,7 +8,7 @@ use syn::{
     Meta, NestedMeta, Path,
 };
 
-fn process_submeta<F: FnMut(&Meta)>(attrs: &Vec<Attribute>, f: &mut F) {
+fn process_submeta<F: FnMut(&Meta)>(attrs: &[Attribute], f: &mut F) {
     for attr in attrs {
         let list = if let Ok(Meta::List(list)) = attr.parse_meta() {
             list
@@ -145,9 +145,7 @@ pub fn err_per_field(input: TokenStream) -> TokenStream {
                 };
                 field_wrapper = FieldWrapper::Result(path);
             }
-            _ => {
-                return;
-            }
+            _ => {}
         });
         let wrapper_body_part = match &field_wrapper {
             FieldWrapper::Raw => {
