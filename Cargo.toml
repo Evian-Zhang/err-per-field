@@ -2,6 +2,12 @@
 name = "err-per-field"
 version = "0.1.0"
 edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "A more fine-grained control over field-level error handling."
+homepage = "https://github.com/Evian-Zhang/err-per-field"
+documentation = "https://docs.rs/err-per-field"
+repository = "https://github.com/Evian-Zhang/err-per-field"
+readme = "README.md"
 
 [workspace]
 members = [".", "err-per-field-derive"]
